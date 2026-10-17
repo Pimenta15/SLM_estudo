@@ -12,6 +12,17 @@ Este projeto realiza o **treinamento de um modelo de linguagem (GPT-2)** utiliza
 * Geração de texto a partir do modelo ajustado.
 * Tradução automática para português utilizando `googletrans`.
 
+## 🔄 Pipeline
+
+```mermaid
+graph LR
+  A[Diseases_Symptoms<br/>Hugging Face] --> B["Texto: doença | sintomas"]
+  B --> C[Tokenizer DistilGPT-2]
+  C --> D[Fine-tuning<br/>10 épocas · Adam 5e-4]
+  D --> E[Geração de texto<br/>a partir do nome da doença]
+  E --> F[Tradução para PT<br/>googletrans]
+```
+
 ## 🛠️ Tecnologias Utilizadas
 
 * [Python 3](https://www.python.org/)
@@ -35,8 +46,8 @@ Este projeto realiza o **treinamento de um modelo de linguagem (GPT-2)** utiliza
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/Pimenta15/SLM_estudo.git
+cd SLM_estudo
 ```
 
 ### 2. Instalar dependências
@@ -77,3 +88,5 @@ Este repositório foi utilizado como **material de estudo e prática** para reun
 ---
 
 ✍️ Desenvolvido no contexto de estudos em **Processamento de Linguagem Natural (PLN)** e **IA aplicada à saúde**.
+
+Feito por [João Pedro Pimenta](https://www.linkedin.com/in/joao-pedro-pimenta/) durante a graduação em Ciência da Computação na UNICAP.
